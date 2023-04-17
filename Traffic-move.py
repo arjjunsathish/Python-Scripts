@@ -13,7 +13,7 @@ Result = []
 
 for x in range(len(media)):
 	payload = '''{
-    "apiVersion": "5.3.5","ks": "djJ8MTQ3fKQyqqPMEk0cF2RzuBIjzQ4NbyjQZelcEX34IxPpj8nvI4GpK7qKklxUo7Pbv28wFX_kDr-QSb8zB80PX3kCogJXRyrQ814cLFAbECw0WHJu","service": "asset","action": "getPlaybackContext","assetId": "'''+media[x]+'''","assetType": "MEDIA","contextDataParams": {"objectType": "KalturaPlaybackContextOptions","context": "PLAYBACK"}}'''
+    "apiVersion": "5.3.5","ks": "","service": "asset","action": "getPlaybackContext","assetId": "'''+media[x]+'''","assetType": "MEDIA","contextDataParams": {"objectType": "KalturaPlaybackContextOptions","context": "PLAYBACK"}}'''
 	response = requests.request("POST", url_gpc, headers=headers_gpc, data=payload)
 	gpc_headers = response.headers
 	gpc_resp = json.loads(response.text)
