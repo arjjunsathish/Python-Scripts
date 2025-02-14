@@ -9,7 +9,7 @@ import xlrd
 import openpyxl
 
 
-url = 'https://www.kaltura.com/api_v3/service/flavorAsset/action/getByEntryId'
+url = 'https://www.xxxxx.com/api_v3/service/flavorAsset/action/getByEntryId'
 header = {'Content-Type': 'application/json'}
 
 [{Period('2020', 'A-DEC'): {Period('2020-01', 'M'): 7541786, Period('2020-02', 'M'): 7568818, Period('2020-03', 'M'): 7595959, Period('2020-04', 'M'): 7623774, Period('2020-05', 'M'): 15227977, Period('2020-06', 'M'): 15254445, Period('2020-07', 'M'): 15285977, Period('2020-08', 'M'): 15329969, Period('2020-09', 'M'): 15358790, Period('2020-10', 'M'): 15388477, Period('2020-11', 'M'): 15419252, Period('2020-12', 'M'): 15472219}}, {Period('2021', 'A-DEC'): {Period('2021-01', 'M'): 6135684, Period('2021-03', 'M'): 7756086, Period('2021-05', 'M'): 9865790, Period('2021-07', 'M'): 9884728, Period('2021-08', 'M'): 13896717, Period('2021-09', 'M'): 16211578, Period('2021-10', 'M'): 18683527, Period('2021-11', 'M'): 25084282, Period('2021-12', 'M'): 27461262}}]
