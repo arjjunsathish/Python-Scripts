@@ -3,8 +3,8 @@ import os
 from boto3.session import Session
 import gzip
 
-session = Session(aws_access_key_id = 'ASIAZ5D5XWFRGIU6TANF', aws_secret_access_key = 'GGOXRwVw0LRK3RxM95NrY3YVWJTNOfj0sr2wE5O5', region_name = 'ap-southeast-1', profile_name= 'okta')
-session = boto3.Session(profile_name='okta')
+session = Session(aws_access_key_id = '', aws_secret_access_key = '', region_name = '', profile_name= '')
+session = boto3.Session(profile_name='')
 s3 = session.resource('s3')
 bucket = s3.Bucket('sgp2-ott-app-logs')
 path = ['logs/ott-nginx/2022/05/03/',
