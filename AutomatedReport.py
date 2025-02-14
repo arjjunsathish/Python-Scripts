@@ -3,17 +3,17 @@ import json
 import subprocess
 import pandas as pd
 
-media = ['355821', '356006']
-ip = ['202.73.37.0', '219.75.22.42', '111.65.77.0', '175.156.109.0', '116.87.197.87']
-#ip = ['202.73.37.0', '219.75.22.42']
-url_gpc = "https://rest-sgs1.ott.kaltura.com/api_v3/service/asset/action/getPlaybackContext"
+media = ['', '']
+ip = ['', '', '']
+
+url_gpc = "https://.ott.kaltura.com/api_v3/service/asset/action/getPlaybackContext"
 headers_gpc = {'Content-Type': 'application/json'}
 padding = ['content-type', 'content-length', 'date', 'last-modified', 'expires', 'cache-control', 'etag', 'x-vod-me', 'x-vod-session', 'access-control-allow-headers', 'access-control-expose-headers', 'access-control-allow-methods', 'access-control-allow-origin', 'timing-allow-origin', 'accept-ranges','x-proxy-me', 'x-proxy-session', 'server', 'via', 'x-amz-cf-pop', 'x-cache', 'x-amz-cf-pop', 'x-amz-cf-id']
 Result = []
 
 for x in range(len(media)):
 	payload = '''{
-    "apiVersion": "5.3.5","ks": "djJ8MTQ3fP_zPUbGmuZxp4rln45N8nLDyRmh1AeMYgBRlFTOB1wW_kgQcz0UEPsmvOJbutXoyQ41GAhJmKJHTDK8vhHNsuDalKSkk02NXulbXcMoWjLMtDRJ4C6kB7eXDAfNlrk1VUiKjhpO3raNMK9v2UI96BXnWAMpvOqinOkQcIKzEtkdAQhvS9mk3Big6zohQJr6SsSQw66hn5y95DlnX1eEDsqgrJ7mFQVwtmlIQQeTboKi4InPGztJu95S-uyMFlKs1d3LclrpEE26GyEbE666Jc71nwJyzNlqs2gfPh18ekX17xzhovmupziP6Vrzwqf8yx2ZKYkW1UKfzkuJivyLVULvoV6Aj4OfrG9cwFk0ZmzL","service": "asset","action": "getPlaybackContext","assetId": "'''+media[x]+'''","assetType": "MEDIA","contextDataParams": {"objectType": "KalturaPlaybackContextOptions","context": "PLAYBACK"}}'''
+    "apiVersion": "5.3.5","ks": "","service": "asset","action": "getPlaybackContext","assetId": "'''+media[x]+'''","assetType": "MEDIA","contextDataParams": {"objectType": "KalturaPlaybackContextOptions","context": "PLAYBACK"}}'''
 	response = requests.request("POST", url_gpc, headers=headers_gpc, data=payload)
 	gpc_headers = response.headers
 	gpc_resp = json.loads(response.text)
