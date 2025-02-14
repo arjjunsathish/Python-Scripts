@@ -3,10 +3,10 @@ import json
 import subprocess
 import pandas as pd
 
-media = ['355821', '356006']
-ip = ['202.73.37.0', '219.75.22.42', '111.65.77.0', '175.156.109.0', '116.87.197.87']
-#ip = ['202.73.37.0', '219.75.22.42']
-url_gpc = "https://rest-sgs1.ott.kaltura.com/api_v3/service/asset/action/getPlaybackContext"
+media = ['', '']
+ip = ['']
+
+url_gpc = "https://rest.ott.kaltura.com/api_v3/service/asset/action/getPlaybackContext"
 headers_gpc = {'Content-Type': 'application/json'}
 padding = ['content-type', 'content-length', 'date', 'last-modified', 'expires', 'cache-control', 'etag', 'x-vod-me', 'x-vod-session', 'access-control-allow-headers', 'access-control-expose-headers', 'access-control-allow-methods', 'access-control-allow-origin', 'timing-allow-origin', 'accept-ranges','x-proxy-me', 'x-proxy-session', 'server', 'via', 'x-amz-cf-pop', 'x-cache', 'x-amz-cf-pop', 'x-amz-cf-id']
 Result = []
