@@ -7,8 +7,8 @@ import os
 from boto3.session import Session
 Import gzip
 
-session = Session(aws_access_key_id = 'ASIAZ5D5XWFRGIU6TANF', aws_secret_access_key = 'GGOXRwVw0LRK3RxM95NrY3YVWJTNOfj0sr2wE5O5', region_name = 'ap-southeast-1', profile_name= 'okta')
-session = boto3.Session(profile_name='okta')
+session = Session(aws_access_key_id = '', aws_secret_access_key = '', region_name = '', profile_name= '')
+session = boto3.Session(profile_name='')
 s3 = session.resource('s3')
 bucket = s3.Bucket('sgp2-ott-app-logs')
 for obj in bucket.objects.filter(Prefix = 'logs/ott-nginx/2022/03/13/'):
@@ -30,6 +30,6 @@ for x in range(len(f2)):
 	a = f2[x]
 	b = a.split('/')
 	c = b[len(b)-1]
-	d = '/Volumes/KalturaHDD/Emeritus-Data/Phoenix/debug/'+c
+	d = '/Volumes/KalturaHDD/Data/Phoenix/debug/'+c
 	bucket.download_file(f2[x], d)
 	
